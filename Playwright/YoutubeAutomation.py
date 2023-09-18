@@ -10,7 +10,7 @@ with (sync_playwright() as p):
 
     sleep(10)
 
-email = "adicione aqui seu email"
+    email = "adicione aqui seu email"
     # encotra e preeche o campo de email
     page.locator('xpath=//*[@id="identifierId"]').click()
     page.fill('xpath=//*[@id="identifierId"]', email)
