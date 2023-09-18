@@ -10,11 +10,14 @@ with (sync_playwright() as p):
 
     sleep(10)
 
+email = "adicione aqui seu email"
     # encotra e preeche o campo de email
     page.locator('xpath=//*[@id="identifierId"]').click()
-    page.fill('xpath=//*[@id="identifierId"]', "joserodrigueshnd18@gmail.com")
+    page.fill('xpath=//*[@id="identifierId"]', email)
     page.locator('xpath=//*[@id="identifierNext"]/div/button/div[3]').click()
     sleep(20)
+
+    # por segurança não adicione aqui sua senha, pode digitar manualmente no navegador.
 
     # Espere até que os elementos com a classe 'style-scope ytd-expanded-shelf-contents-renderer' sejam carregados
     page.wait_for_selector('.style-scope.ytd-expanded-shelf-contents-renderer')
